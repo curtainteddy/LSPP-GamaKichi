@@ -25,8 +25,16 @@ body {
 }
 
 a {
+    display: flex;
+    align-self: center;
     text-decoration: none;
     color: var(--primary-color);
+    transition: color 0.1s ease-in-out;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
 }
 
 /* Header Styles */
@@ -157,7 +165,7 @@ nav a:hover {
 .icons button {
   width: 50px;
   /* height: 38px; */
-  padding: 0.5rem;
+
   border: none;
   background: #f1f5f9;
   border-radius: 50%;
@@ -415,6 +423,10 @@ section {
 
 .view-profile:hover {
     background-color: var(--secondary-color);
+}
+
+.social-media{
+    padding: 0.5rem;
 }
 
 /* Modal Styles */
