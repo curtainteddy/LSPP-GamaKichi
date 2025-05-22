@@ -8,6 +8,14 @@
   --text-color: #1a3a2a;
   --text-light: #6bbf8e;
   --background-color: #f6fff9;
+  --primary-color: #038e43;
+  --secondary-color: #025c2a;
+  --accent-color: #6ee7b7;
+  --light-color: #eafaf1;
+  --dark-color: #01351a;
+  --text-color: #1a3a2a;
+  --text-light: #6bbf8e;
+  --background-color: #f6fff9;
 }
 
 *,
@@ -16,9 +24,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 
@@ -28,9 +40,19 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   transition: background 0.3s, color 0.3s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background 0.3s, color 0.3s;
 }
 
 a {
+  display: flex;
+  align-self: center;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.1s ease-in-out;
   display: flex;
   align-self: center;
   text-decoration: none;
@@ -686,6 +708,153 @@ section {
   color: var(--dark-color);
 }
 
+.goals-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d5a3d;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #4caf50;
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.goals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.goal-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #4caf50;
+}
+
+.goal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.goal-card i {
+  font-size: 3rem;
+  color: #4caf50;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.goal-icon {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dark-mode-toggle-text {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.goal-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skill-badge {
+  display: inline-block;
+  background: #e8f5e8;
+  color: #2d5a3d;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem 0.3rem 0.3rem 0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.skill-badge:hover {
+  background: #4caf50;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.progress-bar {
+  margin-top: 1.5rem;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.goal-icon {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.goal-card:hover .goal-icon {
+  transform: scale(1.1) rotate(5deg);
+  color: #45a049;
+}
+
 /* Tools Section */
 .tools-section {
   max-width: 1200px;
@@ -1057,6 +1226,77 @@ body.dark-mode .doc-card {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+body.dark-mode {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-mode .dark-mode-toggle-text {
+  color: #fff;
+}
+
+body.dark-mode .goals-section {
+  color: #fff;
+}
+
+body.dark-mode .section-title {
+  color: #fff;
+}
+
+body.dark-mode .section-title::after {
+  background: #4caf50;
+}
+
+body.dark-mode .goal-card {
+  background: #2a2a3e;
+  border-top-color: #4caf50;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .goal-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .goal-card i {
+  color: #4caf50;
+}
+
+body.dark-mode .goal-icon:hover {
+  color: #45a049;
+}
+
+body.dark-mode .goal-card p {
+  color: #ccc;
+}
+
+body.dark-mode .skill-badge {
+  background: #3a3a5e;
+  color: #ccc;
+  border-color: #4caf50;
+}
+
+body.dark-mode .skill-badge:hover {
+  background: #4caf50;
+  color: white;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+body.dark-mode .progress-bar {
+  background: #3a3a5e;
+}
+
+body.dark-mode .progress-fill {
+  background: linear-gradient(90deg, #4caf50, #45a049);
+}
+
+body.dark-mode .progress-fill::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+
 body.dark-mode .section-title {
   color: #b6e2c6;
 }
@@ -1165,6 +1405,18 @@ body.dark-mode .theme-toggle:hover {
   .footer-links {
     justify-content: center;
   }
+
+    .goals-container {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-card {
+    padding: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1214,4 +1466,6 @@ body.dark-mode .theme-toggle:hover {
 
 body.dark-mode .dark-mode-toggle-text {
   color: #fff;
+  color: #fff;
 }
+
