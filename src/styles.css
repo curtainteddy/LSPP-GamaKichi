@@ -85,206 +85,211 @@ nav a:hover {
 
 /* Content-1:Start */
 .box {
-  width: 320px;
-  min-height: 340px;
-  border-radius: 24px;
-  padding: 24px 18px 18px 18px;
-  text-align: center;
-  background: #f8fafc;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  transition: box-shadow 0.3s;
+    width: 320px;
+    min-height: 340px;
+    border-radius: 24px;
+    padding: 24px 18px 18px 18px;
+    text-align: center;
+    background: #f8fafc;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s;
 }
 
 .box:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
 }
 
 .box1 {
-  margin-top: 24px;
-  width: 280px;
+    margin-top: 24px;
+    width: 280px;
 }
 
 .content {
-  margin: 18px 0 0 0;
+    margin: 18px 0 0 0;
 }
 
 .image img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 10px auto;
-  border: 4px solid var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 .level {
-  font-size: 0.8em;
-  background-color: rgba(88, 164, 151, 0.15);
-  width: 60px;
-  padding: 4px 0;
-  border-radius: 6px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin: 0 auto 12px auto;
-  color: var(--primary-color);
+    font-size: 0.8em;
+    background-color: rgba(88, 164, 151, 0.15);
+    width: 60px;
+    padding: 4px 0;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 auto 12px auto;
+    color: var(--primary-color);
 }
 
 .name {
-  font-size: 1.3em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 2px;
-  color: var(--dark-color);
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    color: var(--dark-color);
 }
 
 .job_title {
-  font-size: 0.8em;
-  font-weight: 600;
-  color: #7b7b7b;
-  margin-top: -2px;
-  margin-bottom: 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #7b7b7b;
+    margin-top: -2px;
+    margin-bottom: 6px;
 }
 
 .job_discription {
-  font-size: 0.95em;
-  color: #6b7280;
-  margin: 12px 0 18px 0;
-  line-height: 1.5;
+    font-size: 0.95em;
+    color: #6b7280;
+    margin: 12px 0 18px 0;
+    line-height: 1.5;
 }
 
 .icons {
-  margin: 0 0 10px 0;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 .icons button {
-  width: 50px;
-  /* height: 38px; */
+    width: 50px;
+    /* height: 38px; */
 
-  border: none;
-  background: #f1f5f9;
-  border-radius: 50%;
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s, color 0.3s;
-  cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    border: none;
+    background: #f1f5f9;
+    border-radius: 50%;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
-.icons button:hover, .icons button:focus {
-  background: var(--primary-color);
-  color: #fff;
+.icons button:hover,
+.icons button:focus {
+    background: var(--primary-color);
+    color: #fff;
 }
 
 ion-icon {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 ion-icon:hover {
-  color: #58a497;
-  transition: color 0.3s;
+    color: #58a497;
+    transition: color 0.3s;
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin: 18px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 18px 0 0 0;
 }
 
 .button .message {
-  background: #f1f5f9;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  border-radius: 10px;
-  font-weight: bold;
-  width: 110px;
-  height: 40px;
-  transition: background 0.3s, color 0.3s, letter-spacing 0.3s;
+    background: #f1f5f9;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    font-weight: bold;
+    width: 110px;
+    height: 40px;
+    transition: background 0.3s, color 0.3s, letter-spacing 0.3s;
 }
 
 .button .connect {
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  width: 110px;
-  height: 40px;
-  transition: background 0.3s, color 0.3s, letter-spacing 0.3s;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 110px;
+    height: 40px;
+    transition: background 0.3s, color 0.3s, letter-spacing 0.3s;
 }
 
-.button .connect:hover, .button .connect:focus {
-  background-color: var(--secondary-color);
-  letter-spacing: 1px;
+.button .connect:hover,
+.button .connect:focus {
+    background-color: var(--secondary-color);
+    letter-spacing: 1px;
 }
 
-.button .message:hover, .button .message:focus {
-  background: rgba(88, 164, 151, 0.12);
-  color: var(--secondary-color);
-  letter-spacing: 1px;
+.button .message:hover,
+.button .message:focus {
+    background: rgba(88, 164, 151, 0.12);
+    color: var(--secondary-color);
+    letter-spacing: 1px;
 }
 
 button:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
+
 /* Content-1:End */
 
 /* Content-2:Start */
 .box2 {
-  margin-top: 50px;
-  margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 .box2 img {
-  width: 80px;
+    width: 80px;
 }
 
 .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 10px;
 }
 
 h5 {
-  font-weight: bolder;
-  font-size: 1em;
+    font-weight: bolder;
+    font-size: 1em;
 }
 
 .row p {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 .box2 .text {
-  text-align: left;
+    text-align: left;
 }
 
 .box2 .text .name {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 .box2 .text .job_title {
-  font-size: 0.6em;
-  margin-bottom: 10px;
+    font-size: 0.6em;
+    margin-bottom: 10px;
 }
 
 .box2 .text .job_discription {
-  margin: 0px;
+    margin: 0px;
 }
 
 .box2 .text .about {
-  font-size: 0.9em;
-  font-weight: bolder;
+    font-size: 0.9em;
+    font-weight: bolder;
 }
+
 /* Content-2:End */
 
 
@@ -296,7 +301,8 @@ h5 {
     display: flex;
     align-items: center;
     padding: 0 5%;
-    margin-top: 74px; /* Account for fixed header */
+    margin-top: 74px;
+    /* Account for fixed header */
     transition: background 0.3s, color 0.3s;
     position: relative;
     overflow: hidden;
@@ -372,9 +378,9 @@ section {
 /* Team Section */
 .team-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    padding: 2rem 0;
 }
 
 .member-card {
@@ -425,7 +431,7 @@ section {
     background-color: var(--secondary-color);
 }
 
-.social-media{
+.social-media {
     padding: 0.5rem;
 }
 
@@ -459,6 +465,7 @@ section {
         opacity: 0;
         transform: translateY(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -662,109 +669,142 @@ footer {
 
 /* Dark mode styles */
 body.dark-mode {
-    --primary-color: #0f5132; /* deep green */
-    --secondary-color: #14532d; /* slightly lighter green */
-    --accent-color: #198754; /* accent green */
-    --light-color: #23272b; /* card backgrounds */
-    --dark-color: #000000; /* main background */
-    --text-color: #ffffff; /* main text */
-    --text-light: #b6e2c6; /* secondary text */
-    --background-color: #000000; /* body background */
+    --primary-color: #0f5132;
+    /* deep green */
+    --secondary-color: #14532d;
+    /* slightly lighter green */
+    --accent-color: #198754;
+    /* accent green */
+    --light-color: #23272b;
+    /* card backgrounds */
+    --dark-color: #000000;
+    /* main background */
+    --text-color: #ffffff;
+    /* main text */
+    --text-light: #b6e2c6;
+    /* secondary text */
+    --background-color: #000000;
+    /* body background */
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-header.dark-mode, body.dark-mode header {
+header.dark-mode,
+body.dark-mode header {
     background-color: #181a1b;
     color: var(--text-color);
 }
 
-nav a.dark-mode, body.dark-mode nav a {
+nav a.dark-mode,
+body.dark-mode nav a {
     color: #b6e2c6;
 }
 
-nav a.dark-mode:hover, body.dark-mode nav a:hover {
+nav a.dark-mode:hover,
+body.dark-mode nav a:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
 
-.hero.dark-mode, body.dark-mode .hero {
+.hero.dark-mode,
+body.dark-mode .hero {
     background: linear-gradient(135deg, #0f5132, #000000);
     color: #fff;
 }
 
-.member-card.dark-mode, body.dark-mode .member-card,
-.goal-card.dark-mode, body.dark-mode .goal-card,
-.tool-item.dark-mode, body.dark-mode .tool-item,
-.doc-card.dark-mode, body.dark-mode .doc-card {
+.member-card.dark-mode,
+body.dark-mode .member-card,
+.goal-card.dark-mode,
+body.dark-mode .goal-card,
+.tool-item.dark-mode,
+body.dark-mode .tool-item,
+.doc-card.dark-mode,
+body.dark-mode .doc-card {
     background-color: #181a1b;
     color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.section-title.dark-mode, body.dark-mode .section-title {
+.section-title.dark-mode,
+body.dark-mode .section-title {
     color: #b6e2c6;
 }
 
-.section-title.dark-mode::after, body.dark-mode .section-title::after {
+.section-title.dark-mode::after,
+body.dark-mode .section-title::after {
     background-color: var(--primary-color);
 }
 
-.cta-button.dark-mode, body.dark-mode .cta-button {
+.cta-button.dark-mode,
+body.dark-mode .cta-button {
     background-color: var(--primary-color);
     color: #fff;
 }
 
-.cta-button.dark-mode:hover, body.dark-mode .cta-button:hover {
+.cta-button.dark-mode:hover,
+body.dark-mode .cta-button:hover {
     background-color: var(--accent-color);
     color: #fff;
 }
 
-.modal-content.dark-mode, body.dark-mode .modal-content {
+.modal-content.dark-mode,
+body.dark-mode .modal-content {
     background-color: #181a1b;
     color: #fff;
 }
 
-.close.dark-mode, body.dark-mode .close {
+.close.dark-mode,
+body.dark-mode .close {
     color: #b6e2c6;
 }
 
-.close.dark-mode:hover, body.dark-mode .close:hover {
+.close.dark-mode:hover,
+body.dark-mode .close:hover {
     color: var(--accent-color);
 }
 
-.footer-content.dark-mode, body.dark-mode .footer-content,
-footer.dark-mode, body.dark-mode footer {
+.footer-content.dark-mode,
+body.dark-mode .footer-content,
+footer.dark-mode,
+body.dark-mode footer {
     background-color: #181a1b;
     color: #fff;
 }
 
-.footer-links a.dark-mode, body.dark-mode .footer-links a {
+.footer-links a.dark-mode,
+body.dark-mode .footer-links a {
     color: #b6e2c6;
 }
 
-.footer-links a.dark-mode:hover, body.dark-mode .footer-links a:hover {
+.footer-links a.dark-mode:hover,
+body.dark-mode .footer-links a:hover {
     color: var(--primary-color);
 }
 
-.footer-social a.dark-mode, body.dark-mode .footer-social a {
+.footer-social a.dark-mode,
+body.dark-mode .footer-social a {
     color: #b6e2c6;
 }
 
-.footer-social a.dark-mode:hover, body.dark-mode .footer-social a:hover {
+.footer-social a.dark-mode:hover,
+body.dark-mode .footer-social a:hover {
     color: var(--primary-color);
 }
 
-.footer-bottom.dark-mode, body.dark-mode .footer-bottom {
+.footer-bottom.dark-mode,
+body.dark-mode .footer-bottom {
     border-top: 1px solid #23272b;
     color: #b6e2c6;
 }
 
-.theme-toggle.dark-mode, body.dark-mode .theme-toggle {
+.theme-toggle.dark-mode,
+body.dark-mode .theme-toggle {
     background: var(--primary-color);
     color: #fff;
 }
-.theme-toggle.dark-mode:hover, body.dark-mode .theme-toggle:hover {
+
+.theme-toggle.dark-mode:hover,
+body.dark-mode .theme-toggle:hover {
     background: var(--accent-color);
     color: #fff;
 }
@@ -801,7 +841,7 @@ footer.dark-mode, body.dark-mode footer {
 
     .hero p {
         font-size: 1rem;
-    margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .section-title {
