@@ -511,10 +511,10 @@ section {
 
 /* Team Section */
 .team-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
   gap: 1 1.5rem;
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
   padding: 0 0rem;
   overflow: hidden;

@@ -35,7 +35,7 @@ Welcome to our GamaKichi's Portfolio Page project! This static site introduces o
 
 ## 📚 Project Wiki
 
-See our [GitHub Wiki](https://github.com/your-repo/wiki) for:
+See our [Gamakichi Wiki](https://github.com/curtainteddy/LSPP-GamaKichi/wiki) for:
 
 - 📝 Project Plan
 - 🎭 Team Roles
@@ -56,17 +56,16 @@ See our [GitHub Wiki](https://github.com/your-repo/wiki) for:
 
 ## 📌 Project Management
 
-**Trello Kanban Board**:  
-[View Board](https://trello.com/b/your-board-link)
+**Kanban Board**: [View Board](https://github.com/users/curtainteddy/projects/2/)
 
 ---
 
-<!-- ## 🌐 Live Site
+## 🌐 Live Site
 
 Check out the live site hosted via GitHub Pages:  
-🔗 [https://your-team.github.io/team-portfolio](https://your-team.github.io/team-portfolio)
+🔗 [GAMAKICHI PORTFOLIO](https://curtainteddy.github.io/LSPP-GamaKichi/)
 
---- -->
+---
 
 ## 🙌 Credits
 
