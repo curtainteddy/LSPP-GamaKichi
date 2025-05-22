@@ -230,11 +230,13 @@ nav a:hover {
 .icons button:focus {
     background: var(--primary-color);
     color: #fff;
+}
 .icons button:hover,
 .icons button:focus {
   background: var(--primary-color);
   color: #fff;
 }
+
 
 ion-icon {
     pointer-events: none;
