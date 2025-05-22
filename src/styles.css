@@ -1033,3 +1033,7 @@ body.dark-mode .theme-toggle:hover {
     width: 100%;
   }
 }
+
+body.dark-mode .dark-mode-toggle-text {
+  color: #FFF;
+}
