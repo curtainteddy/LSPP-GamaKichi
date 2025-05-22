@@ -769,6 +769,191 @@ footer.dark-mode, body.dark-mode footer {
     color: #fff;
 }
 
+/* Profile Card Modern Preview Style */
+.profile-preview__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.profile-preview {
+  --bg-pos-y--start: 0;
+  --bg-pos-y--end: 0;
+  --bg-pos-y: var(--bg-pos-y--start);
+  --delay: 0;
+  --duration: 6s;
+  --shadow-blur: 24px;
+  --shadow-color: var(--primary-color);
+  --outline-w: 9px;
+  --preview-bg: #fff;
+  --mobile--w: 320px;
+  --mobile--h: 480px;
+  background-clip: padding-box;
+  background-image: var(--img, none);
+  background-position-y: var(--bg-pos-y);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: var(--outline-w) solid var(--border-color, transparent);
+  border-radius: 16px;
+  box-shadow: 0 0 var(--shadow-blur) 0 var(--shadow-color);
+  transition-property: border, box-shadow, filter, outline-offset, opacity, rotate, scale, z-index;
+  transition-duration: 0.15s, 0.15s, 0.6s, 0.6s, 0.3s, 0.3s, 0.3s, 0.15s;
+  filter: grayscale(100%) sepia(5%);
+  mix-blend-mode: multiply;
+  opacity: 0.69;
+  scale: 0.85;
+  rotate: var(--rotation, -4deg);
+  outline: var(--outline-w) solid var(--preview-bg);
+  outline-offset: var(--outline-w);
+  min-height: var(--mobile--h);
+  min-width: var(--mobile--w);
+  width: var(--mobile--w);
+  max-width: 100vw;
+  position: relative;
+  animation-name: bg-scroll;
+  animation-delay: var(--delay);
+  animation-duration: var(--duration);
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.profile-preview:focus-within,
+.profile-preview:hover {
+  --shadow-blur: 200px;
+  --shadow-color: var(--accent-color);
+  --border-color: var(--shadow-color);
+  background-color: white;
+  mix-blend-mode: initial;
+  filter: none;
+  opacity: 1;
+  outline-offset: calc(var(--outline-w) / 2);
+  scale: 1;
+  rotate: 0deg;
+  transition-property: border, box-shadow, filter, outline-offset, opacity, rotate, scale, z-index;
+  transition-duration: 0.15s, 0.15s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.15s;
+  z-index: 6;
+}
+.profile-preview:focus-within {
+  --shadow-color: var(--primary-color);
+  z-index: 7;
+}
+.profile-preview .profile-content {
+  background: rgba(255,255,255,0.92);
+  border-radius: 0 0 16px 16px;
+  padding: 1.5rem 1rem 1.2rem 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-preview .profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  margin-top: -60px;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  background: #fff;
+}
+.profile-preview .profile-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.2em;
+}
+.profile-preview .profile-role {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  margin-bottom: 0.5em;
+}
+.profile-preview .profile-desc {
+  font-size: 0.95em;
+  color: #444;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.profile-preview .profile-socials {
+  display: flex;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+}
+.profile-preview .profile-socials a {
+  color: var(--primary-color);
+  background: #f1f5f9;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  transition: background 0.3s, color 0.3s;
+}
+.profile-preview .profile-socials a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+.profile-preview .profile-actions {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+.profile-preview .profile-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.2em;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.profile-preview .profile-actions button:hover {
+  background: var(--secondary-color);
+}
+
+@keyframes bg-scroll {
+  to {
+    background-position-y: var(--bg-pos-y--end);
+  }
+}
+
+/* Fade out other cards on hover/focus */
+.profile-preview__container:has(.profile-preview:hover, .profile-preview:focus-within) .profile-preview:not(:hover, :focus) {
+  opacity: 0.4;
+}
+
+@media (max-width: 900px) {
+  .profile-preview__container {
+    gap: 1.2rem;
+  }
+  .profile-preview {
+    --mobile--w: 90vw;
+    min-width: 220px;
+    max-width: 95vw;
+  }
+}
+@media (max-width: 600px) {
+  .profile-preview__container {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .profile-preview {
+    --mobile--w: 98vw;
+    min-width: 180px;
+    max-width: 99vw;
+  }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header {
