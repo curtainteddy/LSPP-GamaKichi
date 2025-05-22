@@ -976,29 +976,32 @@ body.dark-mode .theme-toggle:hover {
 }
 
 @media (max-width: 480px) {
-    .hero {
-        text-align: center;
-        padding: 2rem 1rem;
-    }
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 
-    .hero h2 {
-        font-size: 1.6rem;
-    }
+  .hero h2 {
+    font-size: 1.6rem;
+  }
 
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
 
-    .section-title {
-        font-size: 1.3rem;
-    }
+  .section-title {
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 2.5rem 0.5rem;
+  }
+  .box1 {
+    width: 100%;
+  }
+}
 
-    section {
-        padding: 2.5rem 0.5rem;
-    }
-
-    .box1 {
-        width: 100%;
-    }
+body.dark-mode .dark-mode-toggle-text {
+  color: #FFF;
+}
 }
