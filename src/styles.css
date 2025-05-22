@@ -808,3 +808,37 @@ footer.dark-mode, body.dark-mode footer {
         font-size: 1.8rem;
     }
 }
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--light-color);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.theme-toggle:hover, .theme-toggle:focus {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.theme-toggle i {
+  transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), color 0.3s;
+}
+body.dark-mode .theme-toggle {
+  background: var(--primary-color);
+  color: #fff;
+}
+body.dark-mode .theme-toggle:hover, body.dark-mode .theme-toggle:focus {
+  background: var(--accent-color);
+  color: #fff;
+}
