@@ -164,6 +164,76 @@ document.addEventListener("DOMContentLoaded", function () {
     setTheme(isDark ? "dark" : "light");
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const toolItems = document.querySelectorAll(".tool-item");
+    const body = document.body;
+    let isDarkMode = false;
+
+    // Dark mode toggle (press 'D' key)
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "d" || e.key === "D") {
+        isDarkMode = !isDarkMode;
+        body.classList.toggle("dark-mode", isDarkMode);
+      }
+    });
+
+    // Enhanced hover effects
+    toolItems.forEach((item, index) => {
+      // Add staggered floating animation
+      setTimeout(() => {
+        item.classList.add("animate");
+      }, index * 200);
+
+      // Enhanced click effects
+      item.addEventListener("click", function () {
+        this.style.transform = "scale(0.95)";
+        setTimeout(() => {
+          this.style.transform = "";
+        }, 150);
+      });
+
+      // Magnetic effect on mouse move
+      item.addEventListener("mousemove", function (e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        const moveX = x * 0.1;
+        const moveY = y * 0.1;
+
+        this.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+      });
+
+      item.addEventListener("mouseleave", function () {
+        this.style.transform = "";
+      });
+    });
+
+    // Intersection observer for scroll animations
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0) scale(1)";
+          }, index * 100);
+        }
+      });
+    }, observerOptions);
+
+    toolItems.forEach((item) => {
+      item.style.opacity = "0";
+      item.style.transform = "translateY(50px) scale(0.8)";
+      item.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+      observer.observe(item);
+    });
+  });
+
   // On load, set theme from localStorage
   (function () {
     const saved = localStorage.getItem("theme");
@@ -177,3 +247,101 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })();
 });
+
+ // Add interactive hover effects and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const goalCards = document.querySelectorAll('.goal-card');
+            const skillBadges = document.querySelectorAll('.skill-badge');
+            const progressFills = document.querySelectorAll('.progress-fill');
+            
+            // Dark mode toggle for demonstration
+            const body = document.body;
+            let isDarkMode = false;
+            
+            // Add click event to toggle dark mode (for demo purposes)
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'd' || e.key === 'D') {
+                    isDarkMode = !isDarkMode;
+                    body.classList.toggle('dark-mode', isDarkMode);
+                }
+            });
+
+            // Enhanced card hover effects
+            goalCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.borderTopColor = '#45a049';
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.borderTopColor = '#4CAF50';
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Skill badge interactions
+            skillBadges.forEach(badge => {
+                badge.addEventListener('click', function() {
+                    this.style.animation = 'pulse 0.6s ease-in-out';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 600);
+                });
+            });
+
+            // Progress bar animation
+            const animateProgressBars = () => {
+                progressFills.forEach(fill => {
+                    const targetWidth = fill.getAttribute('data-width');
+                    fill.style.width = '0%';
+                    setTimeout(() => {
+                        fill.style.width = targetWidth + '%';
+                    }, 300);
+                });
+            };
+
+            // Intersection observer for scroll animations
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        
+                        // Trigger progress bar animation when card comes into view
+                        const progressBar = entry.target.querySelector('.progress-fill');
+                        if (progressBar) {
+                            setTimeout(() => {
+                                const targetWidth = progressBar.getAttribute('data-width');
+                                progressBar.style.width = targetWidth + '%';
+                            }, 500);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            goalCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = `opacity 0.8s ease ${index * 0.2}s, transform 0.8s ease ${index * 0.2}s`;
+                observer.observe(card);
+            });
+
+            // Add pulse animation to CSS
+            if (!document.querySelector('#pulse-animation')) {
+                const style = document.createElement('style');
+                style.id = 'pulse-animation';
+                style.textContent = `
+                    @keyframes pulse {
+                        0% { transform: scale(1); }
+                        50% { transform: scale(1.1); }
+                        100% { transform: scale(1); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        });
