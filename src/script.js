@@ -141,15 +141,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Dark/Light mode toggle
   const toggleBtn = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
   const body = document.body;
 
   function setTheme(mode) {
     if (mode === "dark") {
       body.classList.add("dark-mode");
-      toggleBtn.textContent = "☀️";
+      themeIcon.classList.remove("fa-moon");
+      themeIcon.classList.add("fa-sun");
+      themeIcon.setAttribute("title", "Switch to light mode");
     } else {
       body.classList.remove("dark-mode");
-      toggleBtn.textContent = "🌙";
+      themeIcon.classList.remove("fa-sun");
+      themeIcon.classList.add("fa-moon");
+      themeIcon.setAttribute("title", "Switch to dark mode");
     }
     localStorage.setItem("theme", mode);
   }
@@ -234,7 +239,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const saved = localStorage.getItem("theme");
     if (saved === "dark") {
       body.classList.add("dark-mode");
-      toggleBtn.textContent = "☀️ Light Mode";
+      themeIcon.classList.remove("fa-moon");
+      themeIcon.classList.add("fa-sun");
+    } else {
+      themeIcon.classList.remove("fa-sun");
+      themeIcon.classList.add("fa-moon");
     }
   })();
 });
